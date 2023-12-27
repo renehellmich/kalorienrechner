@@ -15,7 +15,7 @@ export function buttonMove() {
         const slcsexValue = slcsex.value;
         const slcPALValue = slcPAL.value;
 
-        if (slcsexValue == "none" || slcPALValue == "none") {
+        if (slcsexValue === "none" || slcPALValue === "none") {
 
             /*
             const buttonRect = button.getBoundingClientRect();
@@ -33,7 +33,7 @@ export function buttonMove() {
 
             const direction = boolDirect === 0 ? "" : "-";
             console.log(`${direction}${displacementX}`);
-            
+
             const CSSRule = `@keyframes move {
                 from {
                     transform: translateX(0);
@@ -92,6 +92,7 @@ export function buttonMove() {
     slcsex.addEventListener("change", changeButtonColor);
     slcPAL.addEventListener("change", changeButtonColor);
     button.addEventListener("mouseover", buttonMove);
+    // button.addEventListener("mouseout", buttonMove);
     // button.addEventListener("mouseleave", buttonMoveReverse);
 
 }

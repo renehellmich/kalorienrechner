@@ -31,7 +31,7 @@ const calcBMR = () => {
 
     }
 
-    return BMR;
+    return Number(BMR);
 }
 
 const calcPAL = () => {
@@ -64,14 +64,17 @@ const calcPAL = () => {
             break;
     }
 
-    return PAL;
+    return Number(PAL);
 }
 
 buttonMove();
 
-function calcKcal() {
+function calcKcal(event) {
+    event.preventDefault();
     const BMR = calcBMR();
     const PAL = calcPAL();
+
+    console.log(typeof BMR, typeof PAL);
 
     if (pCheck == false) {
         outputError.style.display = "none"
@@ -83,5 +86,7 @@ function calcKcal() {
     }
 
     console.log(BMR * PAL);
-    output.innerText = BMR * PAL + " kcal";
+    output.innerText = BMR * PAL +  " kcal";
 }
+
+document.getElementById("button_submit").addEventListener("click", calcKcal);
