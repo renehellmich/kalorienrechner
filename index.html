@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <form action="#" onsubmit="calcKcal(); return false">
+        <section class="sc__input">
+            <div class="div__input">
+                <label for="weight">Gewicht:</label>
+                <input type="number" name="weight" id="input_weight" required placeholder="Gewicht in [kg]">
+            </div>
+            <div class="div__input">
+                <label for="height">Körpergröße:</label>
+                <input type="number" name="height" id="input_height" required placeholder="Körpergröße in [cm]">
+            </div>
+            <div class="div__input">
+                <label for="age">Alter:</label>
+                <input type="number" name="age" id="input_age" required placeholder="Alter in Jahre">
+            </div>
+            <div class="div__input">
+                <label for="slcSec">Geschlecht</label>
+                <select name="slcSex" id="slcSex">
+                    <option value="none"></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="div__input">
+                <label for="slcPAL">Auswahl der Aktivität</label>
+                <select name="slcPAL" id="slcPAL">
+                    <option value="none"></option>
+                    <option value="sit">sitzend</option>
+                    <option value="lightactiv">Leicht aktiv</option>
+                    <option value="modactiv">Morderat aktiv</option>
+                    <option value="veryactiv">Sehr aktiv</option>
+                    <option value="heavyactiv">Sehr stark aktiv</option>
+                </select>
+            </div>
+            <p id="p_error_output" style="display: none;"></p>
+        </section>
+        <hr>
+        <section class="sc__output">
+            <button type="submit">Grundumsatz berechnen</button>
+            <p>BMR pro Tag: <span id="output"></span></p>
+        </section>
+
+
+
+    </form>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
