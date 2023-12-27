@@ -1,4 +1,4 @@
-
+import {buttonMove} from './buttonmove.js';
 
 const outputError = document.getElementById("p_error_output");
 const output = document.getElementById("output");
@@ -67,7 +67,7 @@ const calcPAL = () => {
     return PAL;
 }
 
-
+buttonMove();
 function calcKcal() {
     const BMR = calcBMR();
     const PAL = calcPAL();

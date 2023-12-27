@@ -1,0 +1,94 @@
+@use 'variables' as var;
+@use 'mixin' as mix;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// @mixin innerOptions($padding, $margin, $shadow, $radius) {
+//     padding: $padding;
+//     margin: $margin;
+//     box-shadow: $shadow;
+//     border-radius: $radius;
+// }
+
+body {
+    @include mix.HW(100vh, 100vw, "", "");
+    @include mix.displaySettings(flex, column, center, center);
+
+    form {
+        @include mix.HW("", 40vw, 1080px, 480px);
+        box-shadow: 0 0 16px 0 black, inset 0 0 8px 0 orange;
+        padding: 32px 24px;
+        border-radius: 16px;
+        // @include mix.innerOptions(32px 24px, "", 0 0 16px 0 black, inset 0 0 8px 0 orange, 16px)
+
+        .sc__input {
+            @include mix.displaySettings(flex, column, "", "");
+            gap: 16px;
+
+            .div__input {
+                @include mix.displaySettings(flex, row, "", "");
+                gap: 32px;
+                @include mix.HW("", 100%, "", "");
+                box-shadow: 0 0 16px 0 black;
+                padding: 8px;
+                border-radius: 8px;
+            }
+
+            .input_number {
+                label {
+                    flex-grow: 4;
+                    text-align: left;
+                    margin-left: 32px;
+                }
+
+                input[type='number'] {
+                    flex-grow: 6;
+                    // align-content: flex-start;
+                }
+            }
+
+            .input_slc {
+
+                label {
+                    flex-grow: 4;
+                    text-align: left;
+                    margin-left: 32px;
+                }
+
+                select {
+                    flex-grow: 6;
+                    // align-content: flex-start;
+                }
+            }
+        }
+
+        hr {
+            margin: 16px 0;
+        }
+
+        .sc__output {
+            @include mix.displaySettings(flex, column, center, "");
+            gap: 16px;
+
+            button {
+                @include mix.HW("", fit-content, "", "");
+                padding: 16px 24px;
+                margin: 0 auto;
+                border-radius: 16px;
+                box-shadow: 0 0 16px 0 black, inset 0 0 8px 0 orange;
+            }
+
+            p {
+                @include mix.HW(fit-content, 60%, "", "");
+                padding: 16px 24px;
+                margin: 0 auto;
+                border-radius: 16px;
+                box-shadow: 0 0 16px 0 black, inset 0 0 8px 0 orange;
+            }
+        }
+    }
+}
