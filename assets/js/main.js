@@ -68,6 +68,7 @@ const calcPAL = () => {
 }
 
 buttonMove();
+
 function calcKcal() {
     const BMR = calcBMR();
     const PAL = calcPAL();
@@ -81,5 +82,6 @@ function calcKcal() {
 
     }
 
+    console.log(BMR * PAL);
     output.innerText = BMR * PAL + " kcal";
 }
