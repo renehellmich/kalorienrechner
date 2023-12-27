@@ -1,3 +1,8 @@
+## 🚀 About Me
+Hi! My name is René. I'm a trainee to become a full stack developer.
+
+My actual projects include HTML, CSS and JavaScript
+
 # kalorienrechner
 
 ### In diesem Mini-Projekt geht es um die Programmierung eines BMR Rechners mittels HTML, SCSS / CSS und JS.
