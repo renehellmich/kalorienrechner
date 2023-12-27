@@ -18,8 +18,15 @@ body {
     @include mix.HW(100vh, 100vw, "", "");
     @include mix.displaySettings(flex, column, center, center);
 
+    h1 {
+        text-align: center;
+        margin-bottom: 32px;
+        box-shadow: 0 0 16px 0 black;
+        border-radius: 8px;
+    }
+
     form {
-        @include mix.HW("", 40vw, 1080px, 480px);
+        @include mix.HW("", 45vw, 1080px, 480px);
         box-shadow: 0 0 16px 0 black, inset 0 0 8px 0 orange;
         padding: 32px 24px;
         border-radius: 16px;
@@ -39,28 +46,33 @@ body {
             }
 
             .input_number {
+                
                 label {
-                    flex-grow: 4;
+                    // flex-grow: 4;
+                    @include mix.HW("", 40%, "", "");
                     text-align: left;
                     margin-left: 32px;
                 }
 
                 input[type='number'] {
-                    flex-grow: 6;
-                    // align-content: flex-start;
+                    // flex-grow: 6;
+                    @include mix.HW("", 100%, "", "")
+                    
                 }
             }
 
             .input_slc {
 
                 label {
-                    flex-grow: 4;
+                    
+                    @include mix.HW("", 40%, "", "");
                     text-align: left;
                     margin-left: 32px;
                 }
 
                 select {
-                    flex-grow: 6;
+                    
+                    @include mix.HW("", 100%, "", "")
                     // align-content: flex-start;
                 }
             }

@@ -6,6 +6,7 @@
 ## Documentation
 
 In dem Programm gibt man als erstes folgende Daten ein:
+
     - Gewicht in [kg]
     - Körpergröße in [cm]
     - Alter in [Jahre]

@@ -26,7 +26,7 @@ export function buttonMove() {
             console.log("X: " + buttonX, "Left: " + buttonLeft, "Right :" + buttonRight);
             */
 
-            const displacementX = 240;
+            const displacementX = 120;
 
             const boolDirect = randomDirection();
             console.log(boolDirect);
@@ -57,8 +57,13 @@ export function buttonMove() {
 
             // console.log("X: " + buttonX, "Left: " + buttonLeft, "Right :" + buttonRight);
         } else {
+            button.classList.remove("move");
             button.style.backgroundColor = color_submit;
         }
+    };
+
+    const onAnimated= () => {
+        button.classList.remove("move");
     }
 
     /*
@@ -92,6 +97,7 @@ export function buttonMove() {
     slcsex.addEventListener("change", changeButtonColor);
     slcPAL.addEventListener("change", changeButtonColor);
     button.addEventListener("mouseover", buttonMove);
+    button.addEventListener("animationend", onAnimated);
     // button.addEventListener("mouseout", buttonMove);
     // button.addEventListener("mouseleave", buttonMoveReverse);
 

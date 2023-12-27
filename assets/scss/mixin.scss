@@ -22,15 +22,15 @@
 }
 
 .move {
-    animation: move 2.5s ease-in-out 0.15s 1 forwards;
+    animation: move 2.5s ease-in-out 0.15s forwards;
 }
 
-@keyframes move {
-    from {
-        transform: translateX(0);
+// @keyframes move {
+//     from {
+//         transform: translateX(0);
 
-    }
-    to {
-        transform: translateX(var.$moveButtonX);
-    }
-}
+//     }
+//     to {
+//         transform: translateX(var.$moveButtonX);
+//     }
+// }
