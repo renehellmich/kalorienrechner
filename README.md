@@ -7,9 +7,9 @@
 
 In dem Programm gibt man als erstes folgende Daten ein:
 
-    - Gewicht in [kg]
-    - Körpergröße in [cm]
-    - Alter in [Jahre]
+    - Gewicht in kg
+    - Körpergröße in cm
+    - Alter in Jahren
 
 Im Zweiten Schritt wird das Geschlecht ausgewählt. Daraus berechnet sich die BMR ( Basal Metabolic Rate )
 
